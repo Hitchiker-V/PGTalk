@@ -3,4 +3,12 @@ Installing the dependencies:
 2. PostCSS to manipulate CSS with JS
 3. Autoprefixer to decides which properties and values to prefix by checking data from Can I Use, a website that tracks what web browsers support what
 
-Removing Home.module.css and cleaning globals.css for everything and adding @tailwind using folders
+- Removing Home.module.css and cleaning globals.css for everything and adding @tailwind using folders
+
+- Scrape all links from PG's site - Make a getLinks function
+
+- Create datatypes to store and transfer essays, chunks i.e parts of essays to create embedding on, Json object that encodes PG's essay with chunks
+
+- Scrape the essays in each link - Make a getEssay function
+
+- Break all the essays into chunks of size 200 tokens and push into a datatype to create a chunked version of the entire essay to feed into gpt model
