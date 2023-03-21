@@ -1,0 +1,6 @@
+Installing the dependencies:
+1. TailwindCSS for styling
+2. PostCSS to manipulate CSS with JS
+3. Autoprefixer to decides which properties and values to prefix by checking data from Can I Use, a website that tracks what web browsers support what
+
+Removing Home.module.css and cleaning globals.css for everything and adding @tailwind using folders
