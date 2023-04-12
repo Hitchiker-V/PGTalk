@@ -111,6 +111,7 @@ const getChunks = async (essay: PGEssay) => {
                 chunkText = ""
             }
 
+            // i is flag for case-insensitive
             if (sentence[sentence.length - 1].match(/[a-z0-9]/i)) {
                 chunkText += sentence + ". ";
             } else {
@@ -135,8 +136,6 @@ const getChunks = async (essay: PGEssay) => {
         };
         return chunk
     });
-
-    // THINK MORE ON THIS
 
     // We need to have a final check where the last set of data to chunk isn't less than 100 tokens
     // Checking if entire chunked essay has more than 1 chunks (given we'll a reverse add chunks to it and deleting the added from the essay untill tokens of any chunk !< 100)
@@ -179,6 +178,7 @@ const getChunks = async (essay: PGEssay) => {
     }
     // Saving all this to a PGJson
     const json: PGJson = {
+        // Aggregate all token count into one count
         tokens: essays.reduce((acc, essay) => acc + essay.tokens, 0),
         essays
     };
